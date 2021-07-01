@@ -36,9 +36,9 @@ class bst {
     }
 
     public void delete (int x) {
-        int flag = 0;
         Node t = root;
         Node p = root;
+        int flag = 0;
         if (root == null) {
             System.out.println("Tree is Empty");
         }
