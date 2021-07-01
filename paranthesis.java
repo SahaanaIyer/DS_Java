@@ -16,8 +16,7 @@ class paranthesis {
             return '#';
         }
         else {
-            char popped = s.arr[s.top];
-            s.top--;
+            char popped = s.arr[s.top--];
             return popped;
         }
     }
@@ -31,9 +30,7 @@ class paranthesis {
     }
 
     public void display (paranthesis s) {
-        if (s.top == -1) {
-            System.out.println("Stack Underflow");
-        }
+        if (s.top == -1) System.out.println("Stack Underflow");
         else {
             for (int i=0; i<=s.top; i++) System.out.print(s.arr[i] + " ");
             System.out.println();
