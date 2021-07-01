@@ -85,6 +85,33 @@ class bst {
         }
     }
 
+    public void search (int x) {
+        Node t = root;
+        Node p = root;
+        int flag = 0;
+        if (root == null) {
+            System.out.println("Tree is Empty");
+        }
+        else {
+            while (t != null) {
+                if (t.data > x) {
+                    p = t;
+                    t = t.left;
+                }
+                else if (t.data < x) {
+                    p = t;
+                    t = t.right;
+                }
+                else {
+                    System.out.println("Key found");
+                    flag = 1;
+                    break;
+                }
+            }
+            if (flag == 0) System.out.println("Key not found");
+        }
+    }
+
     public void inorder (Node t) {
         if (t != null) {
             inorder(t.left);
@@ -123,13 +150,16 @@ class bst {
                     case 2 :    val = sc.nextInt();
                                 b.delete(val);
                                 break inner;
-                    case 3 :    b.inorder(root);
+                    case 3 :    val = sc.nextInt();
+                                b.search(val);
+                                break inner;
+                    case 4 :    b.inorder(root);
                                 System.out.println();
                                 break inner;
-                    case 4 :    b.preorder(root);
+                    case 5 :    b.preorder(root);
                                 System.out.println();
                                 break inner;
-                    case 5 :    b.postorder(root);
+                    case 6 :    b.postorder(root);
                                 System.out.println();
                                 break inner;
                 }
