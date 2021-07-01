@@ -53,21 +53,11 @@ class infix_postfix {
         String s = sc.next();
         StringBuffer val = new StringBuffer();
         int x;
-        char op2, op;
-        String op1, sub;
+        char op1, op2, op;
         op1 = Character.toString(s.charAt(0));
         for (int i=1; i<s.length(); i++) {
-            // op1 = sub;
-            if (s.charAt(i) == '(') p.push(p, s.charAt(i));
-            else if (p.isOperand(p, s.charAt(i))) {
-                op = s.charAt(i);
-            }
-            else if (!p.isOperand(p, s.charAt(i))) {
-                op2 = s.charAt(i);
-            }
-            op1 = op + op1 + op2;
+            
         }
-        // val.insert(op1);
-        System.out.println(op1);
+        
     }
 }

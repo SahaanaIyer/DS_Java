@@ -42,7 +42,7 @@ class prefix {
         else return false;
     }
 
-    public boolean isOperand(prefix p, char x) {
+    public boolean isOperator(prefix p, char x) {
         if (x == '+' || x == '-' || x == '*' || x == '/') return true;
         else return false;
     }
@@ -62,7 +62,7 @@ class prefix {
         int val = 0;
         int x;
         for (int i=0; i<s.length(); i++) {
-            if (p.isOperand(p, s.charAt(i))) p.push(p, s.charAt(i));
+            if (p.isOperator(p, s.charAt(i))) p.push(p, s.charAt(i));
             else {
                 char popped = p.pop(p);
                 if (val == 0) {
